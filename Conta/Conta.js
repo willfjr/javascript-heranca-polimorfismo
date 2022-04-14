@@ -1,7 +1,7 @@
 export class Conta {
 
     constructor(saldoInicial, cliente, agencia) {
-        if(this.constructor == Conta){
+        if(this.constructor === Conta){
             throw new Error("Você não deveria instanciar um objeto do tipo Conta diretamente, pois essa é uma classe abstata");
         }
         this._saldoInicial = saldoInicial;
@@ -46,7 +46,7 @@ export class Conta {
         this._saldo += valor;
     }
 
-    tranferir(valor, conta){
+    transferir(valor, conta){
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado);
 
